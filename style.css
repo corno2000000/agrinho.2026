@@ -1,1 +1,447 @@
+/* ===== CORES DEFINIDAS NO PLANEJAMENTO ===== */
+:root {
+    --verde-escuro: #2D6A4F;
+    --verde-claro: #A7C957;
+    --terra: #BC6C25;
+    --fundo-claro: #F4F1DE;
+    --texto-escuro: #1E3A2F;
+    --branco: #FFFFFF;
+    --cinza: #e9ecef;
+    --preto: #000000;
+    --amarelo: #FFFF00;
+}
 
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-claro);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+/* ===== SEÇÃO HERO (INÍCIO) ===== */
+.hero {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--terra));
+    color: var(--branco);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-principal {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+    background-color: var(--branco);
+}
+
+/* ===== SEÇÕES PADRÃO ===== */
+.secao {
+    padding: 60px 0;
+}
+
+.secao h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--verde-escuro);
+}
+
+/* ===== CARDS (PRÓS E CONTRAS) ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--verde-escuro);
+}
+
+.pros .card {
+    border-left: 5px solid var(--verde-claro);
+}
+
+.contras .card {
+    border-left: 5px solid var(--terra);
+}
+
+/* ===== GUIA DE ALIMENTOS (FUNCIONALIDADE PRINCIPAL) ===== */
+.guia {
+    background-color: var(--branco);
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--texto-escuro);
+}
+
+.alimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.alimento-card {
+    background-color: var(--fundo-claro);
+    border-radius: 15px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.alimento-card:hover {
+    transform: scale(1.05);
+    border-color: var(--verde-claro);
+    background-color: var(--verde-claro);
+}
+
+.alimento-icone {
+    font-size: 2.5rem;
+}
+
+.alimento-card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Área de informação do alimento */
+.info-alimento {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* ===== TABELA COMPARATIVA ===== */
+.tabela-responsiva {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--branco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--cinza);
+}
+
+th {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+tr:hover {
+    background-color: var(--fundo-claro);
+}
+
+/* ===== DICAS ===== */
+.dicas {
+    background-color: var(--verde-claro);
+}
+
+.dicas h2 {
+    color: var(--verde-escuro);
+}
+
+.lista-dicas {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.lista-dicas li {
+    background-color: var(--branco);
+    margin: 15px 0;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+    background-color: var(--cinza);
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+.btn-topo {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--terra);
+    color: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.btn-topo:hover {
+    transform: scale(1.1);
+}
+
+/* ===== BOTÃO DE ACESSIBILIDADE ===== */
+.btn-acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.btn-acessibilidade:hover {
+    transform: scale(1.1);
+}
+
+/* ===== MENU DE ACESSIBILIDADE ===== */
+.menu-acessibilidade {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+}
+
+.menu-acessibilidade button {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.menu-acessibilidade button:hover {
+    background-color: var(--terra);
+}
+
+.menu-acessibilidade.ativo {
+    display: flex;
+}
+
+/* ===== ALTO CONTRASTE ===== */
+.alto-contraste {
+    background-color: var(--preto) !important;
+    color: var(--amarelo) !important;
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .card,
+.alto-contraste .alimento-card,
+.alto-contraste .info-alimento,
+.alto-contraste .menu-acessibilidade {
+    background-color: var(--preto) !important;
+    color: var(--amarelo) !important;
+    border-color: var(--amarelo) !important;
+}
+
+.alto-contraste a,
+.alto-contraste button,
+.alto-contraste .btn-principal,
+.alto-contraste .btn-topo,
+.alto-contraste .btn-acessibilidade {
+    color: var(--amarelo) !important;
+    background-color: var(--preto) !important;
+    border: 1px solid var(--amarelo) !important;
+}
+
+.alto-contraste th {
+    background-color: var(--preto) !important;
+    color: var(--amarelo) !important;
+    border: 1px solid var(--amarelo) !important;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .alimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .alimentos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-acessibilidade, .btn-topo {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .btn-topo {
+        bottom: 80px;
+    }
+}
