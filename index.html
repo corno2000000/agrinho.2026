@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro na Mesa - Alimentos Conscientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DO SITE -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🌾 Agro na Mesa</h1>
+                <p>O que você precisa saber sobre o que come</p>
+            </div>
+            <!-- MENU DE NAVEGAÇÃO -->
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pros">Prós</a></li>
+                    <li><a href="#contras">Contras</a></li>
+                    <li><a href="#guia">Guia de Alimentos</a></li>
+                    <li><a href="#tabela">Tabela</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- SEÇÃO INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>🌱 Agro forte, futuro sustentável</h2>
+                <p>Equilíbrio entre produção e meio ambiente é possível! Descubra os <strong>pontos positivos e negativos</strong> do agronegócio e aprenda a fazer escolhas conscientes na sua alimentação.</p>
+                <a href="#guia" class="btn-principal">🍎 Descubra o que comer →</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRÓS DO AGRO -->
+        <section id="pros" class="secao pros">
+            <div class="container">
+                <h2>✅ Prós do Agronegócio</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>🌽 Alimenta o mundo</h3>
+                        <p>O agronegócio brasileiro produz alimentos para milhões de pessoas no Brasil e no exterior.</p>
+                    </article>
+                    <article class="card">
+                        <h3>💼 Gera empregos</h3>
+                        <p>Milhares de trabalhadores vivem da agricultura e pecuária no campo e nas cidades.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🚜 Tecnologia no campo</h3>
+                        <p>Uso de máquinas, drones e sistemas modernos aumentam a produtividade.</p>
+                    </article>
+                    <article class="card">
+                        <h3>💰 Exportação</h3>
+                        <p>O agro é um dos maiores geradores de riqueza para o Brasil.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTRAS DO AGRO -->
+        <section id="contras" class="secao contras">
+            <div class="container">
+                <h2>❌ Contras do Agronegócio</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>🧪 Agrotóxicos</h3>
+                        <p>O uso excessivo pode contaminar alimentos, o solo e a água.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🌳 Desmatamento</h3>
+                        <p>Queimadas e desmatamento para plantio ameaçam a natureza.</p>
+                    </article>
+                    <article class="card">
+                        <h3>💧 Consumo de água</h3>
+                        <p>Algumas culturas gastam muita água, causando escassez.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🏭 Poluição</h3>
+                        <p>Resíduos da produção animal e química poluem rios e nascentes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO GUIA DE ALIMENTOS (FUNCIONALIDADE PRINCIPAL) -->
+        <section id="guia" class="secao guia">
+            <div class="container">
+                <h2>🍎 Guia de Alimentos</h2>
+                <p class="subtitulo">Clique em qualquer alimento para saber mais sobre agrotóxicos, calorias e saúde</p>
+                
+                <!-- GRADE DE ALIMENTOS -->
+                <div class="alimentos-grid" id="alimentos-grid">
+                    <!-- Os alimentos serão gerados pelo JavaScript -->
+                </div>
+
+                <!-- ÁREA QUE MOSTRA AS INFORMAÇÕES DO ALIMENTO CLICADO -->
+                <div id="info-alimento" class="info-alimento">
+                    <p>👆 Clique em um alimento acima para ver as informações</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO TABELA COMPARATIVA -->
+        <section id="tabela" class="secao tabela-comparativa">
+            <div class="container">
+                <h2>📊 Tabela Comparativa de Alimentos</h2>
+                <div class="tabela-responsiva">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Alimento</th>
+                                <th>Agrotóxico</th>
+                                <th>Calorias (porção)</th>
+                                <th>Efeito na saúde</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpo-tabela">
+                            <!-- Conteúdo gerado pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DICAS DE ALIMENTAÇÃO -->
+        <section id="dicas" class="secao dicas">
+            <div class="container">
+                <h2>💚 Dicas de Alimentação Saudável</h2>
+                <ul class="lista-dicas">
+                    <li>🥬 Prefira alimentos orgânicos - eles têm menos agrotóxicos</li>
+                    <li>🍎 Lave bem frutas e verduras com água e vinagre</li>
+                    <li>🥩 Varie os alimentos: coma de tudo um pouco</li>
+                    <li>💧 Beba bastante água todos os dias</li>
+                    <li>🌽 Evite alimentos ultraprocessados</li>
+                    <li>🍚 Dê preferência para alimentos integrais</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE O PROJETO -->
+        <section id="sobre" class="secao sobre">
+            <div class="container">
+                <h2>📖 Sobre o Projeto</h2>
+                <p>Este site foi criado para o <strong>Concurso Agrinho 2026</strong> com o tema: <em>"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</em>.</p>
+                <p><strong>Público-alvo:</strong> Consumidores conscientes que desejam fazer escolhas alimentares mais saudáveis e sustentáveis.</p>
+                <p><strong>Objetivo:</strong> Mostrar que o agronegócio tem pontos positivos e negativos, ajudando o consumidor a escolher o que comer com mais informação.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>🌾 Concurso Agrinho 2026 - Projeto Front-End</p>
+            <p>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
+            <p>Desenvolvido para conscientização alimentar</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <div id="btn-topo" class="btn-topo" title="Voltar ao topo">⬆️</div>
+
+    <!-- BOTÃO DE ACESSIBILIDADE -->
+    <div id="btn-acessibilidade" class="btn-acessibilidade">♿</div>
+
+    <!-- MENU DE ACESSIBILIDADE -->
+    <div id="menu-acessibilidade" class="menu-acessibilidade">
+        <button id="aumentar-fonte">🔍 A+ Aumentar fonte</button>
+        <button id="diminuir-fonte">🔍 A- Diminuir fonte</button>
+        <button id="alto-contraste">🌓 Alto contraste</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
